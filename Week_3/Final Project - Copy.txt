@@ -1,0 +1,16 @@
+My website is layed out as follows:
+Home - Brief Description of Website, how it works, and current updates.
+	Eat - A list of the best places to eat on MSU campus and why.
+	Study - A list of the best places to sit down and study on MSU campus and why.
+	Map - A map showing where to find each of these locations.
+	Sights - A list of the coolest things one has to see while on MSU campus and why.
+	Events - A list of the best events to try to make it to while on MSU campus.
+
+After listing the layout, I began laying out and writing out my website.
+I hope that was what was meant by "Draft Copy"
+I suspect I may be wrong, by the fact that the following step asked us to place the copy as a text file in our repository.
+It wasn't super clear what a copy was, and I'm not sure what else we are supposed to do, other than type out what our website will say... if so, see the HTML pages I made.
+In the final project folder, open the spartan_explorer.html file and it should be pretty self-explanatory.
+
+Thanks!
+-Allen
