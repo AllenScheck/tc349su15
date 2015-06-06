@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <head>
-<title>Spartan Explorer</title>
+<title>Spartan Explorer - Study</title>
   <link href="/normalize.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   <style>
     header {
       background: url('http://www.cal.msu.edu/files/6914/1840/3847/CAL_website_generic15.jpg');
@@ -13,13 +11,15 @@
       color: white;
       top: 0px;
       width: 100%;
-      height: 80;
+      height: 185px;
+      position: fixed;
       margin-left: 0px;
     }
     ul {
   padding: 10px;
   background: rgba(250, 250, 250, 0.75);
   margin-bottom: 0px;
+  margin-top: 0px;
     }
     li {
   display: inline;
@@ -71,24 +71,29 @@
       text-align: center;
     }
     h3 {
-      align: center;
+      text-align: center;
+    }
+    h4 {
+      margin-top: 185px;
+      font-size: 0px;
     }
     img {
       max-width: 500px;
     }
-    #map { height: 500px; }
   </style>
 </head>
 <body>
   <header>
     <h1>Spartan Explorer</h1>
     <ul>
-      <li><a href="#">Eat</a></li>
-      <li><a href="#">Study</a></li>
-      <li><a href="#">Sights</a></li>
-      <li><a href="#">Events</a></li>
+      <li><a href="eat.html">Eat</a></li>
+      <li><a href="study.html">Study</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="sights.html">Sights</a></li>
+      <li><a href="events.html">Events</a></li>
     </ul>
   </header>
+  <h4> </h4>
   <article>
     <img src="http://www.egr.msu.edu/sites/default/files/content/publications/COE%20outside.JPG">
     <h2>Engineering Library</h2>
@@ -110,4 +115,9 @@
     <button>Comment</button>
     <button>Rate</button>
   </article>
+  <ul>
+    <li>
+      <a href="..\spartan_explorer.html">Home</a>
+    </li>
+  </ul>
 </body>
