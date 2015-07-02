@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <title>Spartan Explorer-Study</title>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="32x32">
+  <style>
+    body{
+      background: rgb(24,69,59);
+      font-family: 'Didact Gothic', sans-serif;
+    }
+    h1 {
+      color: rgb(24,69,59);
+      font-size: 40px;
+    }
+    h2 {
+      color: rgb(24,69,59);
+      font-size: 20px;
+    }
+    h3 {
+      font-size:50px;
+    }
+    ul {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      list-style-type: none;
+    }
+    li {
+      margin-top: 30px;
+      margin-left: -40px;
+      margin-right: auto;
+    }
+    button {
+      background-color: white;
+      color: rgb(24,69,59);
+      margin-bottom: 25px;
+    }
+    article {
+      max-width: 500px;
+      margin: 0 auto;
+      top: 50px;
+      padding: 20px;
+    }
+    img {
+      border: 7px solid white;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+    .top{
+      position: absolute;
+      height: 50px;
+      left: 100px;
+      right: 30%;
+      top: 0;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+      border-left: none;
+      border-right: none;
+      z-index: -1;
+    }
+    .left {
+      position:fixed;
+      left:0; top:0; bottom: 0;
+      width: 100px;
+      background: white;
+      text-align: center;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .right {
+      position:fixed;
+      right:0; top:0; bottom: 0;
+      width: 30%;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .middle {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 30%;
+      color: white;
+    }
+    .bottom {
+      position: absolute;
+      right: 0; left: 0; bottom: 0;
+    }
+    a:link {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:visited {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:hover {
+      color: rgba(178, 128, 89, .75);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    #map-canvas {
+      left: 10px;
+      top: 10px;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      }
+      @media (max-width: 1000px) {
+        .right{
+          width: 0;
+        }
+        .middle{
+          margin-right: 0;
+          }
+        .top{
+          right: 0;
+          border-right: 7px solid rgb(144, 154, 183);
+        }
+        article{
+          max-width: calc(90% - 100px);
+        }
+        img{
+          width: 100%;
+          border: 3px solid white;
+          border-radius: 10px;
+          }
+      }
+  </style>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(42.7275619, -84.4827693),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function mapchange(x1, y1, z1) {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(x1, y1),
+        zoom: z1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+
+    function fullsite() {
+      alert("In the final website, this would have led to the most relevant official website.");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left">
+    <a href="..\spartan_explorer.html"><h2>Spartan Explorer</h2></a>
+    <ul>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="eat.html">Eat</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="sights.html">Sights</a></li>
+      <li><a href="study.html">Study</a></li>
+    </ul>
+    <div class="bottom">
+      <h3><a href="create.html">+</a></h3>
+    </div>
+  </div>
+  <div class='top'>
+    <h1 style="margin-top: -4px; margin-left: 15%; margin-right: 0;">Study</h1>
+  </div>
+  <div class='middle'>
+    <article>
+      <img src="http://www.egr.msu.edu/sites/default/files/content/publications/COE%20outside.JPG">
+      <a href="indvpg.html"><h2 style="color: white;">Engineering Library</h2></a>
+      <p>Hidden Within the heart of the Engineering Building with huge windows opening to the courtyard and only a small, inconspicuous entrance, it's the perfect quiet place to study. Make sure you get the chance to experience it before it is re-purposed in December 2015</p>
+      <button onclick="mapchange(42.7244601, -84.4810228, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none; " src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://hive.msu.edu/sites/default/files/styles/feature/public/feature/hive-image1.jpg?itok=D3XQGYzs">
+      <a href="indvpg.html"><h2 style="color: white;">Wilson Hall "Hive"</h2></a>
+      <p>Made to be a state-of-the-art modern classroom experience, it is filled with all sorts of modern technology. When not in use by a class, it makes for a pretty sweet study-lounge.</p>
+      <button onclick="mapchange(42.7228395, -84.4890709, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="https://www.law.msu.edu/-/img/content/building-at-dusk.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Law Library</h2></a>
+      <p>A quiet place to study. The most secluded and tranquil of all the libraries on campus. Due to several parts of the library being designated as "College of Law students Only", it tends to be considerably unpopulated.</p>
+      <button onclick="mapchange(42.725757, -84.4738922, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://msutoday.msu.edu/_/img/assets/2013/main-library.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">MSU Library</h2></a>
+      <p>We're not talking about the desks on the main floor, or any of the designated study areas. The place to go in the library is up to the very top floor of the east wing. Keep walking until you get to the very back of the room. You will then only deal with a very very infrequent passerby. Quite Quiet.</p>
+      <button onclick="mapchange(42.7308664, -84.4833061, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+  </div>
+  <div class="right">
+    <div id="map-canvas"></div>
+  </div>
+</body>

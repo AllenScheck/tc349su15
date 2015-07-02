@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <title>Spartan Explorer-History</title>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="32x32">
+  <style>
+    body{
+      background: rgb(24,69,59);
+      font-family: 'Didact Gothic', sans-serif;
+    }
+    h1 {
+      color: rgb(24,69,59);
+      font-size: 40px;
+    }
+    h2 {
+      color: rgb(24,69,59);
+      font-size: 20px;
+    }
+    h3 {
+      font-size:50px;
+    }
+    ul {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      list-style-type: none;
+    }
+    li {
+      margin-top: 30px;
+      margin-left: -40px;
+      margin-right: auto;
+    }
+    button {
+      background-color: white;
+      color: rgb(24,69,59);
+      margin-bottom: 25px;
+    }
+    article {
+      max-width: 500px;
+      margin: 0 auto;
+      top: 50px;
+      padding: 20px;
+    }
+    img {
+      border: 7px solid white;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+    .top{
+      position: absolute;
+      height: 50px;
+      left: 100px;
+      right: 30%;
+      top: 0;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+      border-left: none;
+      border-right: none;
+      z-index: -1;
+    }
+    .left {
+      position:fixed;
+      left:0; top:0; bottom: 0;
+      width: 100px;
+      background: white;
+      text-align: center;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .right {
+      position:fixed;
+      right:0; top:0; bottom: 0;
+      width: 30%;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .middle {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 30%;
+      color: white;
+    }
+    .bottom {
+      position: absolute;
+      right: 0; left: 0; bottom: 0;
+    }
+    a:link {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:visited {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:hover {
+      color: rgba(178, 128, 89, .75);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    #map-canvas {
+      left: 10px;
+      top: 10px;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      }
+      @media (max-width: 1000px) {
+        .right{
+          width: 0;
+        }
+        .middle{
+          margin-right: 0;
+          }
+        .top{
+          right: 0;
+          border-right: 7px solid rgb(144, 154, 183);
+        }
+        article{
+          max-width: calc(90% - 100px);
+        }
+        img{
+          width: 100%;
+          border: 3px solid white;
+          border-radius: 10px;
+          }
+      }
+  </style>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(42.7275619, -84.4827693),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function mapchange(x1, y1, z1) {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(x1, y1),
+        zoom: z1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+
+    function fullsite() {
+      alert("In the final website, this would have led to the most relevant official website.");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left">
+    <a href="..\spartan_explorer.html"><h2>Spartan Explorer</h2></a>
+    <ul>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="eat.html">Eat</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="sights.html">Sights</a></li>
+      <li><a href="study.html">Study</a></li>
+    </ul>
+    <div class="bottom">
+      <h3><a href="create.html">+</a></h3>
+    </div>
+  </div>
+  <div class='top'>
+    <h1 style="margin-top: -4px; margin-left: 15%; margin-right: 0;">History</h1>
+  </div>
+  <div class='middle'>
+    <article>
+      <img src="https://c1.staticflickr.com/3/2256/2382410361_552a603dcd.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">MSU Museum</h2></a>
+      <p>The MSU Museum is nothing like the showy Broad Art Museum that people see passing by on Grand River. The MSU Museum sits quietly and unassumingly at the southern side of West Circle. The museum is full of all sorts of artifacts from our past (as a species and as a University). It is an experience that can't be replaced with modern art.</p>
+      <button onclick="mapchange(42.7315693, -84.4816715, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none; " src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Cowles_House_10_2007_BR.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Cowles House</h2></a>
+      <p>The oldest building still standing at MSU, this house once housed the president of the university. While no longer the actual residence, it is occasionally used for social events and is quite the sight to tour.</p>
+      <button onclick="mapchange(42.7330493, -84.4846882, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://steve-lovelace.com/wordpress/wp-content/uploads/2011/10/msu-beaumont-tower-01.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Beaumont Tower</h2></a>
+      <p>The iconic symbol of Michigan State University, coming to mind almost simultaneously, is this beautiful tower. It can be found at the south side of West Circle, still standing strong. If you're lucky enough, you might be able to get someone to give you a tour.</p>
+      <button onclick="mapchange(42.731871, -84.4823597, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://farm4.static.flickr.com/3048/2713677376_daf61ca88a.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">MSU Union</h2></a>
+      <p>Built in 1925, this building has been a center for social interactions ever since. While it has been rebuilt and added on to many times over the course of its existence, it contains many of the earlier rooms, such as the historic Women's Lounge, and the upstairs ballroom. There are plenty more hints to its former glory scattered throughout the building.</p>
+      <button onclick="mapchange(42.734319, -84.4829825, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+  </div>
+  <div class="right">
+    <div id="map-canvas"></div>
+  </div>
+</body>

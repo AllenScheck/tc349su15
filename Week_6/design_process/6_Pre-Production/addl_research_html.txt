@@ -1,0 +1,14 @@
+﻿Inserting Google Maps.
+https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map
+
+
+Side Bar
+http://stackoverflow.com/questions/13189610/how-to-make-a-page-with-header-and-left-sidebar
+
+
+Calc Function
+http://stackoverflow.com/questions/10378292/is-it-possible-to-do-mathematics-inside-css
+
+
+MSU Branding Colors
+http://brand.msu.edu/design-visual/index.html#color

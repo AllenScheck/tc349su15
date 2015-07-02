@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <title>Spartan Explorer-Events</title>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="32x32">
+  <style>
+    body{
+      background: rgb(24,69,59);
+      font-family: 'Didact Gothic', sans-serif;
+    }
+    h1 {
+      color: rgb(24,69,59);
+      font-size: 40px;
+    }
+    h2 {
+      color: rgb(24,69,59);
+      font-size: 20px;
+    }
+    h3 {
+      font-size:50px;
+    }
+    ul {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      list-style-type: none;
+    }
+    li {
+      margin-top: 30px;
+      margin-left: -40px;
+      margin-right: auto;
+    }
+    button {
+      background-color: white;
+      color: rgb(24,69,59);
+      margin-bottom: 25px;
+    }
+    article {
+      max-width: 500px;
+      margin: 0 auto;
+      top: 50px;
+      padding: 20px;
+    }
+    img {
+      border: 7px solid white;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+    .top{
+      position: absolute;
+      height: 50px;
+      left: 100px;
+      right: 30%;
+      top: 0;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+      border-left: none;
+      border-right: none;
+      z-index: -1;
+    }
+    .left {
+      position:fixed;
+      left:0; top:0; bottom: 0;
+      width: 100px;
+      background: white;
+      text-align: center;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .right {
+      position:fixed;
+      right:0; top:0; bottom: 0;
+      width: 30%;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .middle {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 30%;
+      color: white;
+    }
+    .bottom {
+      position: absolute;
+      right: 0; left: 0; bottom: 0;
+    }
+    a:link {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:visited {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:hover {
+      color: rgba(178, 128, 89, .75);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    #map-canvas {
+      left: 10px;
+      top: 10px;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      }
+      @media (max-width: 1000px) {
+        .right{
+          width: 0;
+        }
+        .middle{
+          margin-right: 0;
+          }
+        .top{
+          right: 0;
+          border-right: 7px solid rgb(144, 154, 183);
+        }
+        article{
+          max-width: calc(90% - 100px);
+        }
+        img{
+          width: 100%;
+          border: 3px solid white;
+          border-radius: 10px;
+          }
+      }
+  </style>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(42.7275619, -84.4827693),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function mapchange(x1, y1, z1) {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(x1, y1),
+        zoom: z1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+
+    function fullsite() {
+      alert("In the final website, this would have led to the most relevant official website.");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left">
+    <a href="..\spartan_explorer.html"><h2>Spartan Explorer</h2></a>
+    <ul>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="eat.html">Eat</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="sights.html">Sights</a></li>
+      <li><a href="study.html">Study</a></li>
+    </ul>
+    <div class="bottom">
+      <h3><a href="create.html">+</a></h3>
+    </div>
+  </div>
+  <div class='top'>
+    <h1 style="margin-top: -4px; margin-left: 15%; margin-right: 0;">Events</h1>
+  </div>
+  <div class='middle'>
+    <article>
+      <img src="http://dev.studentlife.msu.edu/wp-content/uploads/2012/11/Stulifecollage.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Sparticipation</h2></a>
+      <p>Held regularly at the beginning of every year, Sparticipation is your chance to get to know all the groups on campus. You will find people who share your interests and you might just spark theirs.</p>
+      <button onclick="mapchange(42.7267786, -84.4894289, 17)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none; " src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://msutoday.msu.edu/_/img/assets/2013/design-day-3.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Design Day</h2></a>
+      <p>At the end of every semester, the MSU College of Engineering holds Design Day: The chance for the engineering students to show off the projects they have been working on for the past semester. It is an impressive convention of unique ideas and always worth checking out.</p>
+      <button onclick="mapchange(42.7241589, -84.481001, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://msutoday.msu.edu/_/img/assets/2012/the-aud.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Haunted Aud</h2></a>
+      <p>The theatre team puts on a great haunted experience in the MSU Auditorium. It's a lot of fun and worth going.</p>
+      <button onclick="mapchange(42.7286938, -84.4765666, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="https://www.msu.edu/~ramseys3/pics/Band%20Block%20S%20Form.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Spartan Spectacular</h2></a>
+      <p>At the beginning of every year, Michigan State has Spartan Spectacular. A day of fun, food, activities, and ending the day with the biggest pep rally in the Big Ten. Don't miss out on your chance to get yourself pumped for the new year and to cheer your teams on to victory.</p>
+      <button onclick="mapchange(42.7281505, -84.4848729, 17)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+  </div>
+  <div class="right">
+    <div id="map-canvas"></div>
+  </div>
+</body>

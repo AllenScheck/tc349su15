@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <title>Spartan Explorer-Art</title>
+  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://cabs.msu.edu/toolkit/images/helmet/gif/Spartan-helmet-Black-150-pxls.gif" sizes="32x32">
+  <style>
+    body{
+      background: rgb(24,69,59);
+      font-family: 'Didact Gothic', sans-serif;
+    }
+    h1 {
+      color: rgb(24,69,59);
+      font-size: 40px;
+    }
+    h2 {
+      color: rgb(24,69,59);
+      font-size: 20px;
+    }
+    h3 {
+      font-size:50px;
+    }
+    ul {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      list-style-type: none;
+    }
+    li {
+      margin-top: 30px;
+      margin-left: -40px;
+      margin-right: auto;
+    }
+    button {
+      background-color: white;
+      color: rgb(24,69,59);
+      margin-bottom: 25px;
+    }
+    article {
+      max-width: 500px;
+      margin: 0 auto;
+      top: 50px;
+      padding: 20px;
+    }
+    img {
+      border: 7px solid white;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+    .top{
+      position: absolute;
+      height: 50px;
+      left: 100px;
+      right: 30%;
+      top: 0;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+      border-left: none;
+      border-right: none;
+      z-index: -1;
+    }
+    .left {
+      position:fixed;
+      left:0; top:0; bottom: 0;
+      width: 100px;
+      background: white;
+      text-align: center;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .right {
+      position:fixed;
+      right:0; top:0; bottom: 0;
+      width: 30%;
+      background: white;
+      border: 7px solid rgb(144, 154, 183);
+    }
+    .middle {
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 30%;
+      color: white;
+    }
+    .bottom {
+      position: absolute;
+      right: 0; left: 0; bottom: 0;
+    }
+    a:link {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:visited {
+      color: rgb(178, 128, 89);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    a:hover {
+      color: rgba(178, 128, 89, .75);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    #map-canvas {
+      left: 10px;
+      top: 10px;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      }
+    @media (max-width: 1000px) {
+      .right{
+        width: 0;
+      }
+      .middle{
+        margin-right: 0;
+        }
+      .top{
+        right: 0;
+        border-right: 7px solid rgb(144, 154, 183);
+      }
+      article{
+        max-width: calc(90% - 100px);
+      }
+      img{
+        width: 100%;
+        border: 3px solid white;
+        border-radius: 10px;
+        }
+    }
+  </style>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(42.7275619, -84.4827693),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function mapchange(x1, y1, z1) {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(x1, y1),
+        zoom: z1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+
+    function fullsite() {
+      alert("In the final website, this would have led to the most relevant official website.");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left">
+    <a href="..\spartan_explorer.html"><h2>Spartan Explorer</h2></a>
+    <ul>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="eat.html">Eat</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="sights.html">Sights</a></li>
+      <li><a href="study.html">Study</a></li>
+    </ul>
+    <div class="bottom">
+      <h3><a href="create.html">+</a></h3>
+    </div>
+  </div>
+  <div class='top'>
+    <h1 style="margin-top: -4px; margin-left: 15%; margin-right: 0;">Art</h1>
+  </div>
+  <div class='middle'>
+    <article>
+      <img src="http://ad009cdnb.archdaily.net/wp-content/uploads/2012/11/50a2a8d5b3fc4b4ec200001d_eli-edythe-broad-art-museum-zaha-hadid-architects_12-34b-18-02a.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Broad Museum</h2></a>
+      <p>An interesting and free modern art museum. The exhibits change on a regular basis, and nothing stays the same. Some of the art is great, and some of it goes to show you what not to do. You never know what you're going to get. If nothing else, you can pick something up to eat from the cafe at the front entrance.</p>
+      <button onclick="mapchange(42.7328862, -84.4766209, 18)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none; " src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://tourguide.cal.msu.edu/media/view/4ffb1595-3c34-44a8-9e42-63a92308e069">
+      <a href="indvpg.html"><h2 style="color: white;">Kresge Art Center</h2></a>
+      <p>Once the central home of art at Michigan State University. Now generally unused with the implementation of the Broad Art Museum. Still used for art classes, you can find many interesting art pieces on display here.</p>
+      <button onclick="mapchange(42.7284431, -84.4750735, 18)">Map</button>
+      <button>Rate</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://msutoday.msu.edu/_/img/assets/2012/wharton-center-night.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Wharton Center</h2></a>
+      <p>The building itself is a work of art, but that's only the beginning. The grounds and the interior are scattered with simple works of art, and of course, the central point of it all is the majestic theater where wonderful works of performing arts are portrayed.</p>
+      <button onclick="mapchange(42.7237891, -84.4701754, 17)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+    <article>
+      <img src="http://www.rieckhoff.com/Brody/Brody.jpg">
+      <a href="indvpg.html"><h2 style="color: white;">Brody Hall</h2></a>
+      <p>One of the most recently re-designed buildings on campus, there is no shortage of art here: hanging from the ceiling, scattered on the grounds, displayed on the walls, and there are even scheduled exhibits.</p>
+      <button onclick="mapchange(42.7314847, -84.4954949, 17)">Map</button>
+      <button onclick="fullsite()">Full Site</button>
+      <img style="border: none;" src="http://brand.msu.edu/_files/images/graphic-elements/spear/spear-medium-black.png">
+    </article>
+  </div>
+  <div class="right">
+    <div id="map-canvas"></div>
+  </div>
+</body>
